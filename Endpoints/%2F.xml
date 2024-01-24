@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/" path="/" id="5e566bb0-0fdf-49ef-9637-41a59cf2626b">
+  <con:settings id="dadc9609-3188-4a75-82a4-f0d15faca81e">
+    <con:setting id="5e566bb0-0fdf-49ef-9637-41a59cf2626bfileName">%2F</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:resource name="tasks" path="tasks" id="63cc33ff-7be8-49db-ba5c-f4953aea6639">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="5" path="{id}" id="31c17de0-2f0c-4c7c-9ec4-55c7cf44ae6f">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Get Task" id="73832525-bb40-49f8-a8c4-5913ef6f1392" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:request name="Get Non-Existing Task" id="838ab39c-161d-4259-be9a-0b032dde9d12" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:request/>
+          <con:originalUri>https://taskboard-212f.onrender.com/api/tasks/5</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="id" value="555"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+        <con:request name="Get Existing Task" id="14b7d2e6-2a14-4413-8645-54d6b78215dc" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:request/>
+          <con:originalUri>https://taskboard-212f.onrender.com/api/tasks/5</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="id" value="${#Project#taskId}"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+        <con:request name="Get task by string" id="4d15b043-d487-4654-a9ee-584c4ea8a616" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:request/>
+          <con:originalUri>https://taskboard-212f.onrender.com/api/tasks/someValue</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="id" value="someValue"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="Get All Tasks Method" id="e9de87a2-f303-49ef-829c-726096d9de18" method="GET">
+      <con:settings/>
+      <con:parameters/>
+      <con:request name="Get All Tasks Request" id="bb2287c5-abc9-4761-93cb-36df8de4b209" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/api/tasks</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:method name="Get All Endpoints Method" id="3e4f4ceb-3fad-4240-bf92-fe246a17478a" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Get All Endpoints Request" id="de2eadd0-07e2-4626-83f9-2eb969700c04" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://taskboard-212f.onrender.com/api/</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="7dbb0109-6efb-4578-a9d4-7ab019f1cbcf">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d1e80dca-0cdb-412d-b66a-9d4dedb5ec2c">
+          <con:authProfile>DimoProd</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="7dbb0109-6efb-4578-a9d4-7ab019f1cbcf">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d1e80dca-0cdb-412d-b66a-9d4dedb5ec2c">
+        <con:authProfile>DimoProd</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="7dbb0109-6efb-4578-a9d4-7ab019f1cbcf">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d1e80dca-0cdb-412d-b66a-9d4dedb5ec2c">
+      <con:authProfile>DimoProd</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

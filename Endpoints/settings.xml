@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="2af22db3-90f6-4564-adbc-bfa25a9142f5" name="Endpoints" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification">
+  <con:settings id="6b0df79c-d1f6-44d4-aa51-0e32bd146a16">
+    <con:setting id="2af22db3-90f6-4564-adbc-bfa25a9142f5fileName">Endpoints</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="API.json">
+    <con:part>
+      <con:url>API.json</con:url>
+      <con:content>{"openapi":"3.0.1","info":{"title":"API","description":"","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/tasks":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}},"/tasks/{id}":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}},"/":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="7dbb0109-6efb-4578-a9d4-7ab019f1cbcf">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d1e80dca-0cdb-412d-b66a-9d4dedb5ec2c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>
