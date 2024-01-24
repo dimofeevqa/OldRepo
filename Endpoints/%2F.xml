@@ -91,6 +91,23 @@
         <con:parameters/>
       </con:request>
     </con:method>
+    <con:method name="Create Task" id="a0cf1e6b-da63-4724-9e1b-46ea184cc851" method="POST">
+      <con:settings/>
+      <con:parameters/>
+      <con:request name="Create Valid Task" id="8032264a-f822-493c-a377-a9bc64f26ac0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{"title" : "New Title from SoapUI"}</con:request>
+        <con:originalUri>https://taskboard-212f.onrender.com/api/tasks</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:request>
+    </con:method>
   </con:resource>
   <con:method name="Get All Endpoints Method" id="3e4f4ceb-3fad-4240-bf92-fe246a17478a" method="GET">
     <con:settings/>

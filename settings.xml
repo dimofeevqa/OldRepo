@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project xmlns:con="http://eviware.com/soapui/config" id="dcc40564-7f68-4161-b94d-1687c67b0d64" created="3.50.0" activeEnvironment="Production" encryptionMode="Not encrypted" name="TaskBoard" resourceRoot="" defaultScriptLanguage="Groovy" projectVersion="" updated="3.50.0" compositeProjectFormat="1.3">
+<con:soapui-project xmlns:con="http://eviware.com/soapui/config" id="dcc40564-7f68-4161-b94d-1687c67b0d64" created="3.50.0" activeEnvironment="Development" encryptionMode="Not encrypted" name="TaskBoard" resourceRoot="" defaultScriptLanguage="Groovy" projectVersion="" updated="3.50.0" compositeProjectFormat="1.3">
   <con:description>Project used for creation of taskboards</con:description>
   <con:settings>
     <con:setting id="dcc40564-7f68-4161-b94d-1687c67b0d64fileName">TaskBoard-readyapi-project</con:setting>

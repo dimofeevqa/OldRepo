@@ -6,7 +6,7 @@
   <con:definitionCache type="TEXT" rootPart="API.json">
     <con:part>
       <con:url>API.json</con:url>
-      <con:content>{"openapi":"3.0.1","info":{"title":"API","description":"","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/tasks":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}},"/tasks/{id}":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}},"/":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}}}}</con:content>
+      <con:content>{"openapi":"3.0.1","info":{"title":"API","description":"","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/tasks":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/tasks/{id}":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}},"/":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}}}}</con:content>
       <con:type>https://swagger.io/openapiv3/specification</con:type>
     </con:part>
   </con:definitionCache>
