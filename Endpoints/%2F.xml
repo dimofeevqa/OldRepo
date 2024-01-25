@@ -7,9 +7,16 @@
   <con:resource name="tasks" path="tasks" id="63cc33ff-7be8-49db-ba5c-f4953aea6639">
     <con:settings/>
     <con:parameters/>
-    <con:resource name="5" path="{id}" id="31c17de0-2f0c-4c7c-9ec4-55c7cf44ae6f">
+    <con:resource name="{id}" path="{id}" id="31c17de0-2f0c-4c7c-9ec4-55c7cf44ae6f">
       <con:settings/>
-      <con:parameters/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
       <con:method name="Get Task" id="73832525-bb40-49f8-a8c4-5913ef6f1392" method="GET">
         <con:settings/>
         <con:parameters>
@@ -73,6 +80,51 @@
           <con:parameters>
             <con:entry key="id" value="someValue"/>
           </con:parameters>
+        </con:request>
+      </con:method>
+      <con:method name="Delete Task" id="17792332-9c12-4038-a692-42f1c003ac68" method="DELETE">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:request name="Delete existing task" id="bf61055c-955b-41fd-bdff-f7bf82bf9be7" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:request/>
+          <con:originalUri>https://taskboard-212f.onrender.com/api</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="id" value="5"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="Update task" id="90ff55bd-280a-4fdd-96b5-fd3e68876b74" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Update Existing Task" id="88d44a96-f701-48db-b385-30dacb96c194" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
         </con:request>
       </con:method>
     </con:resource>

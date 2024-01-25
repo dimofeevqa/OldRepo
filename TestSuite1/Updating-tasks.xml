@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="d62ce781-55c7-4040-9116-506589edc18c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Updating tasks" searchProperties="true" timeout="0">
+  <con:settings id="9ce3aa83-eba6-473d-8e3c-6012a3fde379">
+    <con:setting id="d62ce781-55c7-4040-9116-506589edc18cfileName">Updating-tasks</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Update existing task" id="e858fccf-6025-4911-8ab1-3ef1c934b57c">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks/{id}" methodName="Update task" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Update existing task" id="88d44a96-f701-48db-b385-30dacb96c194" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

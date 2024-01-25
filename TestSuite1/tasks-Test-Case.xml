@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="79f2886b-7868-479c-968a-730361083c34" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="tasks Test Case" searchProperties="true" timeout="0">
+  <con:description id="ffb351f6-4375-4482-8636-72f67fce9f94">The test case generated for the REST resource [tasks] located at [/tasks]</con:description>
+  <con:settings>
+    <con:setting id="79f2886b-7868-479c-968a-730361083c34fileName">tasks-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Get All Tasks Request" id="ad0c0e70-26eb-4cb7-97cc-c1c6d6ab53fd">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks" methodName="Get All Tasks Method" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All Tasks Request" id="bb2287c5-abc9-4761-93cb-36df8de4b209" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/api/tasks</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create Valid Task" id="ec5fcc5a-a120-4546-94f9-445967e3b388">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks" methodName="Create Task" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Create Valid Task" id="8032264a-f822-493c-a377-a9bc64f26ac0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request>{"title" : "New Title from SoapUI"}</con:request>
+        <con:originalUri>https://taskboard-212f.onrender.com/api/tasks</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

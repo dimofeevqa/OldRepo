@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="0fd67857-8f02-4461-9882-bef8ee7f98c1" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/ Test Case" searchProperties="true" timeout="0">
+  <con:description id="422405d3-5b21-4272-b1fc-4ce9bcb8d525">The test case generated for the REST resource [/] located at [/]</con:description>
+  <con:settings>
+    <con:setting id="0fd67857-8f02-4461-9882-bef8ee7f98c1fileName">%2F-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Get All Endpoints Request" id="f97f1804-fcc6-4a40-92dc-08abf1de78ef">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/" methodName="Get All Endpoints Method" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get All Endpoints Request" id="de2eadd0-07e2-4626-83f9-2eb969700c04" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://taskboard-212f.onrender.com/api/</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="7dbb0109-6efb-4578-a9d4-7ab019f1cbcf">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d1e80dca-0cdb-412d-b66a-9d4dedb5ec2c">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

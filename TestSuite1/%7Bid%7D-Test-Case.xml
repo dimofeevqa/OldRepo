@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="58c97d4b-7ca5-4c8f-b534-159ba5e9267f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="{id} Test Case" searchProperties="true" timeout="0">
+  <con:description id="d15967cd-3d39-4c22-8afc-934a2e34f239">The test case generated for the REST resource [{id}] located at [/tasks/{id}]</con:description>
+  <con:settings>
+    <con:setting id="58c97d4b-7ca5-4c8f-b534-159ba5e9267ffileName">%7Bid%7D-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Get Non-Existing Task" id="6c7b36f6-acfe-4b65-a5dc-da40e2ea8cb3">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks/{id}" methodName="Get Task" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get Non-Existing Task" id="838ab39c-161d-4259-be9a-0b032dde9d12" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://taskboard-212f.onrender.com/api/tasks/5</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="555"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get Existing Task" id="b337ad12-3adf-4cb8-8019-4f45d6b76100">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks/{id}" methodName="Get Task" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get Existing Task" id="14b7d2e6-2a14-4413-8645-54d6b78215dc" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://taskboard-212f.onrender.com/api/tasks/5</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${#Project#taskId}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get task by string" id="c5d75e43-c572-4ff5-a4d8-281ba17d6018">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks/{id}" methodName="Get Task" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get task by string" id="4d15b043-d487-4654-a9ee-584c4ea8a616" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://taskboard-212f.onrender.com/api/tasks/someValue</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="someValue"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete existing task" id="63055766-4d5f-4685-a3a4-242f56a0d32e">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks/{id}" methodName="Delete Task" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Delete existing task" id="bf61055c-955b-41fd-bdff-f7bf82bf9be7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://taskboard-212f.onrender.com/api</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="5"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

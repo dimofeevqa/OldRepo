@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="6075e5a6-a9d2-4876-88ed-601d5a8047b0" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="{boardName} Test Case" searchProperties="true" timeout="0">
+  <con:description id="ae797c3a-4a37-46ff-8ec3-9d9779dee480">The test case generated for the REST resource [{boardName}] located at [/tasks/board/{boardName}]</con:description>
+  <con:settings>
+    <con:setting id="6075e5a6-a9d2-4876-88ed-601d5a8047b0fileName">%7BboardName%7D-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Get Valid Board" id="2158c2a1-698c-423b-ac67-21bfba9b87b9">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks/board/{boardName}" methodName="Get Board" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get Valid Board" id="0b623029-97f4-4f1d-9ddf-9dba8b9fc1b4" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/api/tasks/board/In%20Progress</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="boardName" value="In Progress"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get Invalid Board" id="53e4fbad-392a-4da0-a6e2-419077e009da">
+    <con:settings/>
+    <con:config service="Endpoints" resourcePath="/tasks/board/{boardName}" methodName="Get Board" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Get Invalid Board" id="8e49bb87-0e81-4046-b206-a69639a78980" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://taskboard-212f.onrender.com/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://taskboard-212f.onrender.com/api/tasks/board/NonExistingBoard</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="boardName" value="NonExistingBoard"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
