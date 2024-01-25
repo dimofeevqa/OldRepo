@@ -3,7 +3,45 @@
   <con:description>Project used for creation of taskboards</con:description>
   <con:settings>
     <con:setting id="dcc40564-7f68-4161-b94d-1687c67b0d64fileName">TaskBoard-readyapi-project</con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Settings File Password" value=""/>
+  <con:entry key="Report Format(s)" value="XML"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Slack Channel(s)" value=""/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value=""/>
+  <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="Sample"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="Test Case 1"/>
+  <con:entry key="Slack Access Token" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-3.50.0\bin"/>
+  <con:entry key="Environment" value="No Environment"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="${WORKSPACE}"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
   </con:settings>
+  <con:requirements/>
   <con:properties>
     <con:property>
       <con:name>taskId</con:name>
@@ -11,7 +49,7 @@
     </con:property>
   </con:properties>
   <con:wssContainer/>
-  <con:databaseConnectionContainer/>
+  <con:databaseConnectionContainer></con:databaseConnectionContainer>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer>
     <con:oAuth2Profile>
@@ -64,7 +102,7 @@
       <con:name>taskId</con:name>
       <con:value/>
     </con:property>
-    <con:databaseConnectionContainer/>
+    <con:databaseConnectionContainer></con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
   </con:environment>
   <con:environment id="d1e80dca-0cdb-412d-b66a-9d4dedb5ec2c" name="Production" index="1">
@@ -75,7 +113,7 @@
       <con:name>taskId</con:name>
       <con:value>1</con:value>
     </con:property>
-    <con:databaseConnectionContainer/>
+    <con:databaseConnectionContainer></con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
   </con:environment>
   <con:authRepository>

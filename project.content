@@ -1,1 +1,7 @@
 Endpoints\%2F.xml
+TestSuite1\%2F-Test-Case.xml
+TestSuite1\tasks-Test-Case.xml
+TestSuite1\%7Bid%7D-Test-Case.xml
+TestSuite1\%7BboardName%7D-Test-Case.xml
+TestSuite1\Updating-tasks.xml
+TestSuite2\Endpoints-Test-Case.xml
